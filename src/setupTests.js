@@ -7,4 +7,3 @@ process.on('warning', (warning) => {
       console.warn(warning);
     }
   });
-  

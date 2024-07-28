@@ -1,0 +1,40 @@
+# Ignore node_modules (npm will always include this directory)
+node_modules/
+
+# Ignore test directories
+test
+tests
+__tests__/
+*.test.js
+
+# Ignore configuration files
+postcss.config.js
+tailwind.config.js
+tsconfig.json
+tsconfig.node.json
+vite.config.ts
+babel.config.js
+jest.config.js
+webpack.config.js
+.babelrc
+.storybook
+
+# Ignore lock files
+yarn.lock
+package-lock.json
+
+# Ignore source files
+src
+
+# Ignore local environment configuration files
+*.env
+
+# Ignore logs
+*.log
+
+# Ignore IDE/editor specific files
+.vscode/
+.idea/
+
+# Ignore miscellaneous files
+.DS_Store

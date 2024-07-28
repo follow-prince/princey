@@ -1,14 +1,8 @@
 const path = require('path');
 const nodeExternals = require('webpack-node-externals');
 
-module.exports = {
-  mode: 'production',
+const commonConfig = {
   entry: './src/index.js',
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'index.js',
-    libraryTarget: 'commonjs2'
-  },
   module: {
     rules: [
       {
@@ -25,3 +19,30 @@ module.exports = {
   },
   externals: [nodeExternals()]
 };
+
+const commonjsConfig = {
+  ...commonConfig,
+  mode: 'production',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'index.js',
+    libraryTarget: 'commonjs2'
+  }
+};
+
+const esmConfig = {
+  ...commonConfig,
+  mode: 'production',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'index.esm.js',
+    library: {
+      type: 'module'
+    }
+  },
+  experiments: {
+    outputModule: true
+  }
+};
+
+module.exports = [commonjsConfig, esmConfig];

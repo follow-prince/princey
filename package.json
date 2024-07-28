@@ -1,9 +1,9 @@
 {
   "name": "princey",
   "version": "1.0.2",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
   "private": false,
-
   "scripts": {
     "build": "webpack",
     "storybook": "storybook dev -p 6006",
@@ -34,9 +34,7 @@
     "directory": "/"
   },
   "homepage": "https://princey.tech",
-
-
-  "description": "Princey UI is an open-source component .It's comprehensive and can be used in production out of the box.",
+  "description": "Princey UI is an open-source component. It's comprehensive and can be used in production out of the box.",
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -59,7 +57,7 @@
     "@storybook/react": "^8.2.6",
     "@storybook/react-webpack5": "^8.2.6",
     "@storybook/test": "^8.2.6",
-    "@storybook/testing-library": "^0.2.1",
+    "@storybook/testing-library": "^0.2.2",
     "@testing-library/jest-dom": "^6.4.8",
     "@testing-library/react": "^16.0.0",
     "@types/styled-components": "^5.1.34",

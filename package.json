@@ -36,6 +36,7 @@
   "homepage": "https://princey.tech",
   "description": "Princey UI is an open-source component. It's comprehensive and can be used in production out of the box.",
   "dependencies": {
+    "@storybook/addon-docs": "^8.2.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "styled-components": "^6.1.12"

@@ -34,7 +34,7 @@ function App() {
   return (
     <div>
       <ButtonOnChangeColor
-        label="Click"
+        label="Clicky"
         onClick={() => console.log("Button clicked!")}
         borderRadius="10px"
         width="200px"

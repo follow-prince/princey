@@ -8,6 +8,8 @@ const buttonStyles = {
     background: "#0f988e",
     border: "1px solid #0f988e",
   },
+
+  
   secondary: {
     background: "#ffa500",
     border: "1px solid #ffa500",

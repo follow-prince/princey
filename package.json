@@ -1,6 +1,6 @@
 {
   "name": "princey",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "private": false,
@@ -36,7 +36,6 @@
   "homepage": "https://princey.tech",
   "description": "Princey UI is an open-source component. It's comprehensive and can be used in production out of the box.",
   "dependencies": {
-    "@storybook/addon-docs": "^8.2.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.2.1",
@@ -49,7 +48,9 @@
     "@babel/preset-react": "^7.24.7",
     "@babel/preset-typescript": "^7.24.7",
     "@chromatic-com/storybook": "^1.6.1",
+    "@mdx-js/loader": "^3.0.1",
     "@storybook/addon-actions": "^8.2.6",
+    "@storybook/addon-docs": "^8.2.6",
     "@storybook/addon-essentials": "^8.2.6",
     "@storybook/addon-interactions": "^8.2.6",
     "@storybook/addon-links": "^8.2.6",

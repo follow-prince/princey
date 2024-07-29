@@ -36,7 +36,7 @@ CustomStyled.args = {
   downloadBorderColor: "#1e7e34",
   fontSize: "16px",
   fontWeight: "700",
-  borderRadius: "8px",
-  padding: "10px 20px",
+  borderRadius: "3px",
+  padding: "10px",
   minHeight: "50px",
 };

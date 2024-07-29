@@ -10,7 +10,6 @@ export default {
     height: { control: "text" },
     children: { control: "text" },
     onClick: { action: "clicked" },
-
   },
 };
 

@@ -29,7 +29,7 @@ const Button = styled.button`
   }
 
   &:active {
-    background-color: #fcf414;
+    background-color: light-rose;
     box-shadow: none;
     transform: translateY(4px);
   }

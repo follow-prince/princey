@@ -1,12 +1,12 @@
 // src/Button.stories.js
 
 import React from "react";
-import Button from "./Button";
+import ButtonAA from "./ButtonAA";
 import { FaBeer, FaCoffee, FaApple, FaAndroid } from "react-icons/fa";
 
 export default {
-  title: "Button/Button",
-  component: Button,
+  title: "Button/ButtonAA",
+  component: ButtonAA,
   argTypes: {
     label: { control: "text" },
     icon: {
@@ -35,7 +35,7 @@ export default {
   },
 };
 
-const Template = (args) => <Button {...args} />;
+const Template = (args) => <ButtonAA {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

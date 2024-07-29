@@ -2,6 +2,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 import { FaBeer } from "react-icons/fa";
 
+
 const buttonStyles = {
   primary: {
     background: "#0f988e",
@@ -105,7 +106,7 @@ const Text = styled.span`
   transition: all 0.5s ease-in-out;
 `;
 
-const Button = ({
+const ButtonAA = ({
   label = "Click Me",
   icon = <FaBeer />,
   type = "primary",
@@ -146,4 +147,4 @@ const Button = ({
   </ButtonWithIcon>
 );
 
-export default Button;
+export default ButtonAA;

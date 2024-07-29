@@ -78,7 +78,7 @@ const ButtonWithIcon = styled.button`
   }
 
   &:hover .text {
-    transform: translateX(80px);
+    transform: translateX(600%);
   }
 
   &:hover .icon {
@@ -98,7 +98,7 @@ const Icon = styled.span`
   padding-top: 17px;
   width: 30px;
   height: 30px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.8s ease-in-out;
 `;
 
 const Text = styled.span`

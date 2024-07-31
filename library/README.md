@@ -27,27 +27,6 @@ yarn add princey
 
 Here's a simple example of how to use a button component from `princey`:
 
-```jsx
-import React from "react";
-import { ButtonOnChangeColor } from "princey";
-
-function App() {
-  return (
-    <div>
-      <ButtonOnChangeColor
-        label="Clicky"
-        onClick={() => console.log("Button clicked!")}
-        borderRadius="10px"
-        width="200px"
-        height="50px"
-      />
-    </div>
-  );
-}
-
-export default App;
-```
-
 ## Components
 
 ### ButtonOnChangeColor

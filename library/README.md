@@ -45,29 +45,6 @@ A button component that changes color when hovered and clicked.
 
 You can also customize the button with additional styles and properties:
 
-```jsx
-import React from "react";
-import { ButtonOnChangeColor } from "princey";
-
-function AdvancedButtonExample() {
-  return (
-    <div>
-      <ButtonOnChangeColor
-        onClick={() => alert("Advanced Button clicked!")}
-        borderRadius="15px"
-        width="250px"
-        height="60px"
-        style={{ backgroundColor: "lightblue", fontSize: "16px" }}
-      >
-        Advanced Click Me
-      </ButtonOnChangeColor>
-    </div>
-  );
-}
-
-export default AdvancedButtonExample;
-```
-
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or features you would like to see.

@@ -24,7 +24,7 @@ jobs:
           registry-url: https://registry.npmjs.org
 
       - name: Install dependencies
-        run: cd library && npm install
+        run: cd library && npm install --legacy-peer-deps
 
       - name: Build the package
         run: cd library && npm run build

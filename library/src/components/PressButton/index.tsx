@@ -8,9 +8,13 @@ const buttonStyles = cva(
   {
     variants: {
       variant: {
-        primary: "bg-blue-500 text-white",
-        secondary: "bg-gray-500 text-white",
-        danger: "bg-red-500 text-white",
+        red: "hsl(0deg 100% 47%)",
+        green: "hsl(120deg 100% 47%)",
+        yellow: "hsl(60deg 100% 47%)",
+        pink: "hsl(330deg 100% 47%)",
+        purple: "hsl(270deg 100% 47%)",
+        blue: "hsl(210deg 100% 47%)",
+        gray: "hsl(0deg 0% 47%)",
       },
       size: {
         sm: "px-4 py-2 text-sm",
@@ -22,7 +26,7 @@ const buttonStyles = cva(
     },
     defaultVariants: {
       size: "md",
-      variant: "primary",
+      variant: "gray",
     },
   }
 );
@@ -32,6 +36,7 @@ interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonStyles> {
   text: string;
+  dataVariant?: string; // Add a new prop for data-variant
 }
 
 // The PressButton component definition
@@ -45,6 +50,7 @@ export const PressButton: React.FC<ButtonProps> = ({
   return (
     <StyledButton
       className={`${buttonStyles({ variant, size })} ${className}`}
+      data-variant={variant}
       {...props}
     >
       <span className="shadow"></span>
@@ -55,7 +61,7 @@ export const PressButton: React.FC<ButtonProps> = ({
 };
 
 // Styled-components for additional styling
-const StyledButton = styled.button`
+const StyledButton = styled.button<ButtonProps>`
   position: relative;
   border: none;
   background: transparent;
@@ -65,6 +71,27 @@ const StyledButton = styled.button`
   transition: filter 250ms;
   user-select: none;
   touch-action: manipulation;
+
+  --color: ${(props) => {
+    switch (props["data-variant"]) {
+      case "red":
+        return "0deg";
+      case "green":
+        return "120deg";
+      case "yellow":
+        return "60deg";
+      case "pink":
+        return "330deg";
+      case "purple":
+        return "270deg";
+      case "blue":
+        return "210deg";
+      case "gray":
+        return "0deg";
+      default:
+        return "60deg"; // Default to yellow if no valid variant is provided
+    }
+  }};
 
   .shadow {
     position: absolute;
@@ -88,10 +115,10 @@ const StyledButton = styled.button`
     border-radius: 12px;
     background: linear-gradient(
       to left,
-      hsl(340deg 100% 16%) 0%,
-      hsl(340deg 100% 32%) 8%,
-      hsl(340deg 100% 32%) 92%,
-      hsl(340deg 100% 16%) 100%
+      hsl(var(--color) 100% 16%) 0%,
+      hsl(var(--color) 100% 32%) 8%,
+      hsl(var(--color) 100% 32%) 92%,
+      hsl(var(--color) 100% 16%) 100%
     );
   }
 
@@ -102,7 +129,7 @@ const StyledButton = styled.button`
     border-radius: 12px;
     font-size: 1.1rem;
     color: white;
-    background: hsl(345deg 100% 47%);
+    background: hsl(var(--color) 100% 47%);
     will-change: transform;
     transform: translateY(-4px);
     transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);

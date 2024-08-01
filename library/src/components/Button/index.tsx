@@ -1,6 +1,7 @@
 import { cn } from "@/utils";
 import { cva, VariantProps } from "class-variance-authority";
 import { ComponentProps, forwardRef } from "react";
+import "./buttonStyle.css";
 
 const buttonStyles = cva(
   [
@@ -16,6 +17,7 @@ const buttonStyles = cva(
         solid: "",
         outline: "border-2",
         ghost: "transition-colors duration-300",
+        animationButton: "",
       },
       size: {
         sm: "px-4 py-2 text-sm",
@@ -36,12 +38,18 @@ const buttonStyles = cva(
         variant: "outline",
         colorscheme: "primary",
         className:
-          "text-primary-600 border-primary-500 bg-transparent hover:bg-primary-100",
+          "text-primary-600 border-primary-500 bg-transparent hover:bg-primary-100 ",
       },
       {
         variant: "ghost",
         colorscheme: "primary",
-        className: "text-primary-600 bg-transparent hover:bg-primary-100",
+        className:
+          "bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300",
+      },
+      {
+        variant: "animationButton",
+        colorscheme: "primary",
+        className: "AnimationButtonStyle",
       },
     ],
     defaultVariants: {

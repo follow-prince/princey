@@ -6,8 +6,7 @@ docs/.next
 # Ignore lock files
 **/package-lock.json
 **/yarn.lock
-
-
+library/src/Docs/.next
 # Ignore system files
 .DS_Store
 Thumbs.db

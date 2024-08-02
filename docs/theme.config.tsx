@@ -54,8 +54,8 @@ const config: DocsThemeConfig = {
     ),
   },
   primaryHue: {
-    dark: 304,
-    light: 360,
+    dark: 140,
+    light: 300,
   },
   gitTimestamp: ({ timestamp }) => {
     return <div>{timestamp.toString()}</div>;

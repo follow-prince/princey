@@ -1,0 +1,131 @@
+import { GetStartButton, GetTouchButton } from "princey";
+import { Steps } from "nextra/components";
+import { Tabs } from "nextra/components";
+
+# Princey UI buttons
+
+Princey UI provides a set of reusable button components that can be easily integrated into your project. Our buttons are fully customizable and come in various styles, sizes, and colors to suit your design needs.
+
+## Installation
+
+```sh npm2yarn
+npm install princey
+```
+
+## Usage
+
+<Steps>
+
+### GetStartButton
+
+<div className="flex flex-wrap py-10 gap-3 justify-center">
+  <GetStartButton
+    backgroundColor="#FFD700"
+    className=""
+    fontSize="19px"
+    iconColor="#FFD700"
+    iconSize="40px"
+    onClick={() => {}}
+    text="Get Started"
+  />
+  <GetStartButton
+    backgroundColor="#FF0000"
+    className=""
+    fontSize="19px"
+    iconColor="#FF0000"
+    iconSize="40px"
+    onClick={() => {}}
+    text="Get Started"
+  />
+  <GetStartButton
+    backgroundColor="#0000FF"
+    className=""
+    fontSize="19px"
+    iconColor="#0000FF"
+    iconSize="40px"
+    onClick={() => {}}
+    text="Get Started"
+  />
+  <GetStartButton
+    backgroundColor="#00FF00"
+    className=""
+    fontSize="19px"
+    iconColor="#00FF00"
+    iconSize="40px"
+    onClick={() => {}}
+    text="Get Started"
+  />
+</div>
+
+<Tabs items={['Yellow', 'Red', 'Blue', 'Green']}>
+  <Tabs.Tab>
+```js {1,3-11}
+import { GetStartButton } from "princey";
+
+      <GetStartButton
+        backgroundColor="#FFD700"
+        className=""
+        fontSize="19px"
+        iconColor="#FFD700"
+        iconSize="40px"
+        onClick={() => {}}
+        text="Get Started"
+      />
+
+````
+</Tabs.Tab>
+
+<Tabs.Tab>
+```js {1,3-11}
+import { GetStartButton } from "princey";
+
+<GetStartButton
+  backgroundColor="#FF0000"
+  className=""
+  fontSize="19px"
+  iconColor="#FF0000"
+  iconSize="40px"
+  onClick={() => {}}
+  text="Get Started"
+/>
+```
+  </Tabs.Tab>
+  <Tabs.Tab>
+  ```js {1,3-11}
+import { GetStartButton } from "princey";
+
+<GetStartButton
+  backgroundColor="#0000FF"
+  className=""
+  fontSize="19px"
+  iconColor="#0000FF"
+  iconSize="40px"
+  onClick={() => {}}
+  text="Get Started"
+/>
+```
+
+
+  </Tabs.Tab>
+  <Tabs.Tab>
+  ```js {1,3-11}
+import { GetStartButton } from "princey";
+
+<GetStartButton
+  backgroundColor="#00FF00"
+  className=""
+  fontSize="19px"
+  iconColor="#00FF00"
+  iconSize="40px"
+  onClick={() => {}}
+  text="Get Started"
+/>
+```
+</Tabs.Tab>
+</Tabs>
+
+### GetTouchButton
+
+
+</Steps>
+````

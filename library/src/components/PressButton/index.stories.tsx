@@ -4,7 +4,7 @@ import { PressButton } from ".";
 
 // Define metadata for the component
 const meta: Meta<typeof PressButton> = {
-  title: "Components/PressButton",
+  title: "Components/Buttons/PressButton",
   component: PressButton,
   parameters: {
     layout: "centered", // Centers the component in the Storybook canvas

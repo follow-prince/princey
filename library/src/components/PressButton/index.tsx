@@ -2,66 +2,8 @@ import { cva, VariantProps } from "class-variance-authority";
 import React from "react";
 import styled from "styled-components";
 
-// Define button styles using class-variance-authority
-const buttonStyles = cva(
-  "w-full rounded-md font-semibold focus:outline-none disabled:cursor-not-allowed",
-  {
-    variants: {
-      variant: {
-        red: "hsl(0deg 100% 47%)",
-        green: "hsl(120deg 100% 47%)",
-        yellow: "hsl(60deg 100% 47%)",
-        pink: "hsl(330deg 100% 47%)",
-        purple: "hsl(270deg 100% 47%)",
-        blue: "hsl(210deg 100% 47%)",
-        gray: "hsl(0deg 0% 47%)",
-      },
-      size: {
-        sm: "px-4 py-2 text-sm",
-        md: "px-4 py-2 text-base",
-        lg: "px-6 py-3 text-lg",
-        xl: "px-8 py-4 text-xl",
-        xxl: "px-10 py-5 text-2xl",
-      },
-    },
-    defaultVariants: {
-      size: "md",
-      variant: "gray",
-    },
-  }
-);
-
-// Define the component props, including VariantProps from cva
-interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonStyles> {
-  text: string;
-  dataVariant?: string; // Add a new prop for data-variant
-}
-
-// The PressButton component definition
-export const PressButton: React.FC<ButtonProps> = ({
-  text,
-  variant,
-  size,
-  className,
-  ...props
-}) => {
-  return (
-    <StyledButton
-      className={`${buttonStyles({ variant, size })} ${className}`}
-      data-variant={variant}
-      {...props}
-    >
-      <span className="shadow"></span>
-      <span className="edge"></span>
-      <span className="front">{text}</span>
-    </StyledButton>
-  );
-};
-
 // Styled-components for additional styling
-const StyledButton = styled.button<ButtonProps>`
+const Button = styled.button<ButtonProps>`
   position: relative;
   border: none;
   background: transparent;
@@ -89,7 +31,7 @@ const StyledButton = styled.button<ButtonProps>`
       case "gray":
         return "0deg";
       default:
-        return "60deg"; // Default to yellow if no valid variant is provided
+        return "60deg";
     }
   }};
 
@@ -163,3 +105,61 @@ const StyledButton = styled.button<ButtonProps>`
     outline: none;
   }
 `;
+
+// Define button styles using class-variance-authority
+const buttonStyles = cva(
+  "w-full rounded-md font-semibold focus:outline-none disabled:cursor-not-allowed",
+  {
+    variants: {
+      variant: {
+        red: "hsl(0deg 100% 47%)",
+        green: "hsl(120deg 100% 47%)",
+        yellow: "hsl(60deg 100% 47%)",
+        pink: "hsl(330deg 100% 47%)",
+        purple: "hsl(270deg 100% 47%)",
+        blue: "hsl(210deg 100% 47%)",
+        gray: "hsl(0deg 0% 47%)",
+      },
+      size: {
+        sm: "px-4 py-2 text-sm",
+        md: "px-4 py-2 text-base",
+        lg: "px-6 py-3 text-lg",
+        xl: "px-8 py-4 text-xl",
+        xxl: "px-10 py-5 text-2xl",
+      },
+    },
+    defaultVariants: {
+      size: "md",
+      variant: "gray",
+    },
+  }
+);
+
+// Define the component props, including VariantProps from cva
+interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonStyles> {
+  text: string;
+  dataVariant?: string; // Add a new prop for data-variant
+}
+
+// The PressButton component definition
+export const PressButton: React.FC<ButtonProps> = ({
+  text,
+  variant,
+  size,
+  className,
+  ...props
+}) => {
+  return (
+    <Button
+      className={`${buttonStyles({ variant, size })} ${className}`}
+      data-variant={variant}
+      {...props}
+    >
+      <span className="shadow"></span>
+      <span className="edge"></span>
+      <span className="front">{text}</span>
+    </Button>
+  );
+};

@@ -1,0 +1,175 @@
+### Requirements & Installation
+
+import Accordion from "../../../components/utils/Accordion";
+
+Before you start using **Princey UI**, ensure your development environment meets the following requirements. This guide will walk you through the installation process for both React and Next.js projects, with a recommendation to use Tailwind CSS for styling.
+
+---
+
+## 1. React or Next.js Project
+
+Princey UI is compatible with both [react](https://reactjs.org/) and [Next.js](https://nextjs.org/)
+. If you don't have a project set up, you can create one using the following commands:
+
+### Creating a React Project
+
+```bash
+npx create-react-app my-project
+cd my-project
+```
+
+### Creating a Next.js Project
+
+```bash
+npx create-next-app my-next-project
+cd my-next-project
+```
+
+---
+
+## 2. Tailwind CSS (Recommended)
+
+While Princey UI can be used with any styling solution, we recommend using Tailwind CSS for its utility-first approach. To add Tailwind CSS to your project, follow these steps:
+
+### Installing Tailwind CSS
+
+#### For React
+
+1. **Install [tailwindcss](https://tailwindcss.com/docs/guides/nextjs) CSS and its dependencies:**
+
+   ```bash
+   npm install -D tailwindcss postcss autoprefixer
+   npx tailwindcss init -p
+   ```
+
+2. **Configure Tailwind in `tailwind.config.js`:**
+
+   ```javascript
+   module.exports = {
+     content: ["./src/**/*.{js,jsx,ts,tsx}"],
+     theme: {
+       extend: {},
+     },
+     plugins: [],
+   };
+   ```
+
+3. **Add Tailwind's styles to your CSS file:**
+
+   In `src/index.css`:
+
+   ```css
+   @tailwind base;
+   @tailwind components;
+   @tailwind utilities;
+   ```
+
+#### For Next.js
+
+1. **Install [tailwindcss](https://tailwindcss.com/docs/guides/nextjs) CSS and its dependencies:**
+
+   ```bash
+   npm install -D tailwindcss postcss autoprefixer
+   npx tailwindcss init -p
+   ```
+
+2. **Configure Tailwind in `tailwind.config.js`:**
+
+   ```javascript
+   module.exports = {
+     content: [
+       "./pages/**/*.{js,ts,jsx,tsx}",
+       "./components/**/*.{js,ts,jsx,tsx}",
+     ],
+     theme: {
+       extend: {},
+     },
+     plugins: [],
+   };
+   ```
+
+3. **Add Tailwind's styles to your CSS file:**
+
+   In `styles/globals.css`:
+
+   ```css
+   @tailwind base;
+   @tailwind components;
+   @tailwind utilities;
+   ```
+
+---
+
+## 3. Package Manager
+
+Princey UI can be installed using any package manager, such as
+[npm](https://www.npmjs.com/), [Yarn](https://yarnpkg.com/), [bun](https://bunpkg.com/) or [pnpm](https://pnpm.io/).
+
+```sh npm2yarn
+npm install princey
+```
+
+---
+
+## 4. Optional: React Icons
+
+Some components in Princey UI may use icons from the [react-icons](https://react-icons.github.io/react-icons/) library. To include these icons, you can install `react-icons` as follows:
+
+```sh npm2yarn
+npm install react-icons
+```
+
+You can then use the icons like this:
+
+```tsx
+import { FaCoffee } from "react-icons/fa";
+
+function IconExample() {
+  return <FaCoffee />;
+}
+```
+
+---
+
+## 5. Additional Requirements
+
+- **React Version:** Ensure your project uses React 18.x or higher, as Princey UI relies on React hooks.
+- **TypeScript (Optional):** Princey UI supports TypeScript. You can set up TypeScript in your project if needed.
+
+---
+
+### Adding Animations
+
+To enhance your Nextra documentation with animations, you can integrate animations using CSS, Tailwind CSS, or JavaScript libraries like [Framer Motion](https://www.framer.com/motion/).
+
+#### Example with Tailwind CSS
+
+You can add Tailwind CSS animations to buttons or other elements:
+
+```html
+<button
+  class="px-4 py-2 font-bold text-white transition duration-300 ease-in-out transform bg-blue-500 rounded hover:bg-blue-700 hover:-translate-y-1 hover:scale-110"
+>
+  Get Started
+</button>
+```
+
+#### Example with Framer Motion
+
+For more complex animations, you can use Framer Motion:
+
+```tsx
+import { motion } from "framer-motion";
+
+const FadeInButton = () => (
+  <motion.button
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}
+    className="bg-blue-500 text-white font-bold py-2 px-4 rounded"
+  >
+    Get Started
+  </motion.button>
+);
+```
+
+By following these guidelines, you can create a dynamic and engaging documentation site for **Princey UI** using Nextra, Tailwind CSS, and additional animation techniques.

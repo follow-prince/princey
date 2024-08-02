@@ -1,8 +1,5 @@
 {
   "index": "Introduction",
   "Guide": "",
-  "-- Themes": {
-    "type": "separator",
-    "title": "Themes"
-  }
+  "Components": ""
 }

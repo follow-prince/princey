@@ -1,4 +1,3 @@
-export * from "./Button";
 export * from "./ButtonWithLinks";
 export * from "./GetStartButton";
 export * from "./GetTouchButton";

@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { AiOutlineShoppingCart } from "react-icons/ai";
 import { IconButton } from ".";
+// import save icon react
+import { FaSave } from "react-icons/fa";
 
 // Define metadata for the component
 const meta: Meta<typeof IconButton> = {
@@ -10,42 +11,20 @@ const meta: Meta<typeof IconButton> = {
     layout: "centered",
   },
   argTypes: {
-    className: {
-      control: { type: "text" },
-      description: "Additional class names for the button",
+    className: { control: "text" },
+    onClick: { action: "clicked" },
+    label: { control: "text" },
+    size: {
+      control: "radio",
+      options: ["small", "medium", "large"],
     },
-    text: {
-      control: { type: "text" },
-      description: "Text content for the button",
+    color: {
+      control: {
+        type: "select",
+        options: ["lime", "red", "blue"],
+      },
     },
-    icon: {
-      control: { type: "text" },
-      description: "Icon content for the button",
-    },
-    buttonWidth: {
-      control: { type: "text" },
-      description: "Width of the button",
-    },
-    buttonHeight: {
-      control: { type: "text" },
-      description: "Height of the button",
-    },
-    backgroundColor: {
-      control: { type: "color" },
-      description: "Background color of the button",
-    },
-    borderColor: {
-      control: { type: "color" },
-      description: "Border color of the button",
-    },
-    iconBackgroundColor: {
-      control: { type: "color" },
-      description: "Background color of the icon",
-    },
-    hoverBackgroundColor: {
-      control: { type: "color" },
-      description: "Background color of the button on hover",
-    },
+    icon: { control: "text" },
   },
   tags: ["autodocs"], // Automatically generate documentation
 };
@@ -58,37 +37,27 @@ type Story = StoryObj<typeof meta>;
 // Default button story
 export const Default: Story = {
   args: {
-    className: "",
-    text: "Add",
-    icon: <AiOutlineShoppingCart />,
-    backgroundColor: "#FFD700",
-    borderColor: "#FFD700",
-    iconBackgroundColor: "#FFD700",
-    hoverBackgroundColor: "#FFD700",
-    activeBackgroundColor: "#FFD700",
+    label: "Go Back",
+    onClick: () => console.log("Clicked"),
+    color: "lime",
+    icon: <FaSave />,
   },
 };
+
+export const Primary: Story = {
+  args: {
+    label: "Go Back",
+    onClick: () => console.log("Clicked"),
+    color: "red",
+    icon: <FaSave />,
+  },
+};
+
 export const Secondary: Story = {
   args: {
-    className: "",
-    text: "Add",
-    icon: <AiOutlineShoppingCart />,
-    backgroundColor: "#FFD700",
-    borderColor: "#FFD700",
-    iconBackgroundColor: "#FFD700",
-    hoverBackgroundColor: "#FFD700",
-    activeBackgroundColor: "#FFD700",
-  },
-};
-export const Red: Story = {
-  args: {
-    className: "",
-    text: "Add",
-    icon: <AiOutlineShoppingCart />,
-    backgroundColor: "#FF0000",
-    borderColor: "#FF0000",
-    iconBackgroundColor: "#FF0000",
-    hoverBackgroundColor: "#FF0000",
-    activeBackgroundColor: "#FF0000",
+    label: "Go Back",
+    onClick: () => console.log("Clicked"),
+    color: "blue",
+    icon: <FaSave />,
   },
 };

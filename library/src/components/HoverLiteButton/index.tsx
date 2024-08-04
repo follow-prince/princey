@@ -4,22 +4,22 @@ import { ComponentProps, forwardRef, memo, ReactNode } from "react";
 
 // Define base styles for the button with variants for color and size
 const buttonStyles = cva(
-  "cursor-pointer flex items-center rounded-md duration-100 p-2",
+  "cursor-pointer transition-all px-6 py-2 rounded-lg border-b-[4px]",
   {
     variants: {
       color: {
-        lime: "bg-lime-700 hover:bg-lime-900 active:border active:border-lime-400",
-        red: "bg-red-700 hover:bg-red-900 active:border active:border-red-400",
-        blue: "bg-blue-700 hover:bg-blue-900 active:border active:border-blue-400",
+        blue: "bg-blue-500 text-white border-blue-600 hover:brightness-110 hover:border-b-[6px] active:border-b-[2px] active:brightness-90",
+        red: "bg-red-500 text-white border-red-600 hover:brightness-110 hover:border-b-[6px] active:border-b-[2px] active:brightness-90",
+        // Add more colors or styles as needed
       },
       size: {
-        small: "p-1 text-sm",
-        medium: "p-2 text-base",
-        large: "p-3 text-lg",
+        small: "px-4 py-1 text-sm",
+        medium: "px-6 py-2",
+        large: "px-8 py-3 text-lg",
       },
     },
     defaultVariants: {
-      color: "lime",
+      color: "blue",
       size: "medium",
     },
   }
@@ -27,37 +27,33 @@ const buttonStyles = cva(
 
 type ButtonProps = ComponentProps<"button"> & {
   label?: string;
-  color?: "lime" | "red" | "blue";
+  color?: "blue" | "red";
   size?: "small" | "medium" | "large";
   icon?: ReactNode; // For icon support
 };
 
 // Create a memoized component to optimize performance
-export const IconButton = memo(
+export const HoverLiteButton = memo(
   forwardRef<HTMLButtonElement, ButtonProps>(
     (
       {
         className,
         label = "Button",
-        color = "lime",
+        color = "blue",
         size = "medium",
         icon,
         ...props
       },
       ref
     ) => {
-      // Combine default styles from CVA with any custom className
-      const combinedClassName = cn(buttonStyles({ color, size }), className);
-
       return (
         <button
           ref={ref}
-          className={combinedClassName}
+          className={cn(buttonStyles({ color, size }), className)}
           {...props}
-          title={label}
         >
           {icon && <span className="mr-2">{icon}</span>}
-          <span className={`text-${color}-100 font-bold`}>{label}</span>
+          {label}
         </button>
       );
     }

@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "library/**"
+      - "."
 
 jobs:
   publish:
@@ -24,12 +24,12 @@ jobs:
           registry-url: https://registry.npmjs.org
 
       - name: Install dependencies
-        run: cd library && npm install --legacy-peer-deps
+        run: npm install --legacy-peer-deps
 
       - name: Build the package
-        run: cd library && npm run build
+        run: npm run build
 
       - name: Publish to npm
-        run: cd library && npm publish
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

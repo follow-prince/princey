@@ -1,18 +1,20 @@
 # Ignore node_modules and build artifacts
-**/node_modules/
-**/dist/
+docs/node_modules/
+docs/dist/
 docs/.next
-
+node_modules
+dist
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+node_modules
 # Ignore lock files
-**/package-lock.json
-**/yarn.lock
-library/src/Docs/.next
+docs/package-lock.json
+docs/yarn.lock
+lip/Docs/.next
 # Ignore system files
 .DS_Store
 Thumbs.db
 
 
-# Ignore logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+

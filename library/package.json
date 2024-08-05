@@ -1,7 +1,32 @@
 {
   "name": "princey",
   "private": false,
-  "version": "2.1.4",
+  "version": "2.5.1",
+  "keywords": [
+    "react",
+    "UI components",
+    "Prince UI",
+    "Best UI components",
+    "React UI components",
+    "Prince UI components",
+    "Prince UI",
+    "Prince UI React",
+    "Prince UI React components",
+    "Prince UI React components library"
+  ],
+  "author": {
+    "name": "ELAVARASAN",
+    "email": "elavarasa.003@gmail.com",
+    "url": "https://elavarasan.princey.tech"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/follow-prince/princey.git",
+    "directory": "/"
+  },
+  "homepage": "https://princey.tech",
+  "description": "Princey UI is an open-source component. It's comprehensive and can be used in production out of the box.",
   "type": "module",
   "files": [
     "dist"
@@ -21,39 +46,39 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.1",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-icons": "^5.2.1",
-    "tailwind-merge": "^2.4.0"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^8.2.7",
     "@storybook/addon-interactions": "^8.2.7",
-    "@storybook/addon-links": "^8.2.6",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "@storybook/addon-links": "^8.2.7",
+    "react-icons": "^5.2.1",
+    "tailwind-merge": "^2.4.0",
     "@storybook/addon-onboarding": "^8.2.7",
-    "@storybook/blocks": "^8.2.6",
-    "@storybook/react": "^8.2.6",
-    "@storybook/react-vite": "^8.2.6",
-    "@storybook/test": "^8.2.6",
+    "@storybook/blocks": "^8.2.7",
+    "@storybook/react": "^8.2.7",
+    "@storybook/react-vite": "^8.2.7",
+    "@storybook/test": "^8.2.7",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "@typescript-eslint/eslint-plugin": "^7.18.0",
-    "@typescript-eslint/parser": "^7.18.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
     "@vitejs/plugin-react": "^4.3.1",
-    "autoprefixer": "^10.4.19",
+    "autoprefixer": "^10.4.20",
     "eslint": "^9.8.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.9",
     "eslint-plugin-storybook": "^0.8.0",
     "postcss": "^8.4.40",
-    "storybook": "^8.2.6",
+    "storybook": "^8.2.7",
     "styled-components": "^6.1.12",
     "tailwindcss": "^3.4.7",
     "typescript": "^5.5.4",
     "vite": "^5.3.5",
-    "vite-plugin-dts": "^3.6.4",
+    "vite-plugin-dts": "^3.9.1",
     "vite-tsconfig-paths": "^4.3.2"
   },
   "resolutions": {

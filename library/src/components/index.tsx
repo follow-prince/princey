@@ -1,3 +1,4 @@
+import "../index.css";
 export * from "./AnimatedButton";
 export * from "./BlinkButton";
 export * from "./CircularButton";

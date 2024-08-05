@@ -17,7 +17,7 @@ export default defineConfig({
       fileName: "princey-ui",
     },
     rollupOptions: {
-      external: ["react", "react-dom"],
+      external: ["react", "react-dom", "styled-components", "tailwindcss"],
       output: {
         globals: {
           react: "React",
@@ -26,5 +26,6 @@ export default defineConfig({
       },
     },
   },
+
   plugins: [react(), dts({ rollupTypes: true })],
 });

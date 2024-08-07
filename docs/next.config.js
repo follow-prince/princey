@@ -13,6 +13,7 @@ module.exports = {
       "aceternity.com",
       "images.unsplash.com",
       "encrypted-tbn0.gstatic.com",
+      "api.microlink.io",
     ], // Configure image domains here
   },
 };

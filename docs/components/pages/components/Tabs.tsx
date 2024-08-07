@@ -9,10 +9,7 @@ export function TabsDemo() {
       title: "Product",
       value: "product",
       content: (
-        <div className="relative w-full h-full p-10 overflow-hidden text-xl font-bold text-white rounded-2xl md:text-4xl bg-gradient-to-br from-purple-700 to-violet-900">
-          <p>Product Tab</p>
-          <DummyContent />
-        </div>
+        <div className="relative w-full h-full p-10 overflow-hidden text-xl font-bold text-white rounded-2xl md:text-4xl bg-gradient-to-br from-purple-700 to-violet-900"></div>
       ),
     },
     {

@@ -23,7 +23,7 @@ const people = [
   {
     id: 3,
     name: "Dora",
-    designation: "R&D",
+    designation: "React Developer",
     image: Dora,
     linkedin: false,
     link: "",
@@ -31,5 +31,9 @@ const people = [
 ];
 
 export function AnimatedTooltipPreview() {
-  return <AnimatedTooltip items={people} />;
+  return (
+    <div className="flex flex-row justify-center">
+      <AnimatedTooltip items={people} />
+    </div>
+  );
 }

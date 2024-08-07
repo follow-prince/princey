@@ -7,9 +7,9 @@
       "layout": "raw"
     }
   },
-  "docs": {
+  "components": {
     "type": "page",
-    "title": "Docs"
+    "title": "Components"
   },
   "about": {
     "type": "page",

@@ -2,36 +2,10 @@
 title: Prince UI - Home Page
 ---
 
+import HomePage from "../components/pages/HomePage";
 import React from "react";
 import Link from "next/link";
-import HeroImage from "../components/HomePageComponents/heroImage/HeroImage";
 
     <>
-      <div className="container pt-0  px-10 mx-auto ">
-        <div className="h-screen border-inherit">
-          <div className="pt-2 text-xs font-extrabold text-center md:pt-10 drop-shadow-3xl text-rose-500 md:text-4xl ">
-            Welcome Princey UI Library
-
-          </div>
-
-          <div className="flex  justify-between flex-wrap py-8  md:pt-16">
-          <div>
-             <div className="md:pt-20 pt-8 text-2xl font-black dark:text-white  text-gray-700 md:text-8xl md:max-w-[600px]">
-              Component Library
-            </div>
-            <div className="md:pt-10 pt-4 text-base font-extrabold text-start md:w-[400px] drop-shadow-3xl text-rose-500 md:text-2xl ">
-              A collection of reusable components for your projects
-              </div>
-              <div className="">
-              <Link href="/docs">
-                <button className="bg-rose-500 text-white px-4 py-2 rounded-md mt-4">Get Started</button>
-                 </Link>
-                  </div>
-            </div>
-            <div className="pt-12 w-full md:w-[700px]">
-              <HeroImage />
-            </div>
-          </div>
-        </div>
-      </div>
+        <HomePage />
     </>

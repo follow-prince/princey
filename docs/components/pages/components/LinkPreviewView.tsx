@@ -4,7 +4,7 @@ import { LinkPreview } from "../ui/link-preview";
 export function LinkPreviewDemo() {
   return (
     <div className="flex flex-col items-center justify-center px-4 ">
-      <p className="mx-auto mb-10 text-xl md:px-52 text-neutral-500 dark:text-neutral-400 md:text-3xl">
+      <p className="mx-auto mb-10 text-sm text-neutral-500 dark:text-neutral-400 md:text-2xl">
         <LinkPreview url="https://tailwindcss.com" className="font-bold">
           Tailwind CSS
         </LinkPreview>
@@ -31,7 +31,7 @@ export function LinkPreviewDemo() {
           className="font-bold text-transparent bg-clip-text bg-gradient-to-br from-purple-500 to-pink-500"
         >
           {" "}
-          Princey UI Team
+          Princey UI
         </LinkPreview>
         {", "}
         our collection features amazing Tailwind and Framer Motion components.
@@ -39,5 +39,3 @@ export function LinkPreviewDemo() {
     </div>
   );
 }
-
-// Tailwind CSS, Next.js, Shadcn UI, Radix-UI, and Framer Motion are excellent tools for building modern websites. Created by the Princey UI team, our collection features amazing Tailwind and Framer Motion components.

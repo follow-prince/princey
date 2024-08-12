@@ -7,9 +7,9 @@ export function HeroScrollDemo() {
       <ContainerScroll
         titleComponent={
           <>
-            <h1 className="text-4xl font-semibold text-black dark:text-white">
+            <h1 className="text-lg font-semibold text-black dark:text-white">
               Unleash the power of <br />
-              <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
+              <span className="text-2xl md:text-[6rem] font-bold mt-1 leading-none">
                 Scroll Animations
               </span>
             </h1>
